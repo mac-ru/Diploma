@@ -1,6 +1,0 @@
-django>=3.0,<4.0
-psycopg2-binary>=2.8
-pymysql
-requests
-django-admin
-django-admin-tools
