@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{% include 'menu.html' %}
+<h1>Date: </h1>
+{% for x in countries %}
+<p><a href=../../showcountry/{{x}}>{{x}}</a>
+</p>
+{% endfor %}
+<br>

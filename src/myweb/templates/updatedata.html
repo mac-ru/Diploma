@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% include 'menu.html' %}
+<h1>Date: </h1>
+{% for date, countr in data.items %}
+{% for x, y in countr.items %}
+<p>{{x}} -- {{y}}</p>
+{% endfor %}
+{% endfor %}
+
+{% for country in countries %}
+<p>{{country}}</p>
+<p></p>
+{% endfor %}
+<br>

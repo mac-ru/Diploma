@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% include 'menu.html' %}
+<h2>You can select country: 
+<select onchange="document.location=this.options[this.selectedIndex].value">
+{% for x in countries %}
+<option value="../../showcountry/{{x}}">{{x}}</option>
+{% endfor %}
+</select></h2>
+<br>Loaded countries list:
+{% for x in countries %}
+<p>{{x}}</p>
+{% endfor %}
+<br>

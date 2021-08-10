@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% include 'menu.html' %}
+Change country: <select onchange="document.location=this.options[this.selectedIndex].value">
+{% for x in countries %}
+<option value="../../showcountry/{{x}}">{{x}}</option>
+{% endfor %}
+</select>
+<table>
+<tr align="center">
+<td>Country code</td>
+<td>Date</td>
+<td>Confirmed</td>
+<td>Death &uarr;</td>
+<td>Stringency_Actual</td>
+<td>Stringency</td>
+{% for x in data %}
+<tr align="right"><td align="left">{{x.code}}</td><td>{{x.date}}</td><td>{{x.confirmed}}</td><td>{{x.deaths}}</td><td>{{x.stringency_actual}}</td><td>{{x.stringency}}</tr>
+{% endfor %}
+</table>
+
