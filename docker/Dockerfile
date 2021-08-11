@@ -18,6 +18,8 @@ COPY docker/apache2.conf /etc/apache2/apache2.conf
 RUN chown :www-data /code/logs
 
 EXPOSE 80
+ENTRYPOINT ["/code/run.sh"]
+CMD ["172.17.0.1"]
 #ENTRYPOINT /bin/bash
-ENTRYPOINT apache2ctl -D FOREGROUND
+#ENTRYPOINT apache2ctl -D FOREGROUND
 #python manage.py runserver 0.0.0.0:3000
