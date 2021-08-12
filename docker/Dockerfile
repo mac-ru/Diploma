@@ -15,7 +15,7 @@ COPY src/ /code/
 COPY docker/site-config.conf /etc/apache2/sites-available/000-default.conf
 COPY docker/apache2.conf /etc/apache2/apache2.conf
 
-RUN chown :www-data /code/logs
+RUN chown :www-data /code/logs/
 
 EXPOSE 80
 ENTRYPOINT ["/code/run.sh"]
