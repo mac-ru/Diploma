@@ -48,6 +48,7 @@ spec:
                         revision += "-${branch}"
                     }
                     sh "echo 'Building revision: ${revision}'"
+                    sh "echo ${branch}"
                     sh "ls -la"
                 }
             }
