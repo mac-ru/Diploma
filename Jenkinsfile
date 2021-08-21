@@ -48,6 +48,7 @@ spec:
                         revision += "-${branch}"
                     }
                     sh "echo 'Building revision: ${revision}'"
+                    ls -la
                 }
             }
 
@@ -56,6 +57,7 @@ spec:
             steps {
                 container('docker') {
                     script {
+                        ls -la
                         registryIp = sh(script: 'getent hosts registry.kube-system | awk \'{ print $1 ; exit }\'', returnStdout: true).trim()
                         sh "docker build . --build-arg REVISION=${revision}"
                     }
